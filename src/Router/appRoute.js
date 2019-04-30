@@ -2,8 +2,8 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 
 import Home from '../Screens/Home';
-import About from '../Screens/About';
-import Todo from '../Screens/Todo';
+import About from '../Screens/Facebook';
+import Todo from '../Screens/Google';
 
 // layout
 import MainLayout from '../Components/Layout/mainLayout';
@@ -28,7 +28,7 @@ class App extends React.Component {
                     />
                     <Route
                         exact
-                        path="/about"
+                        path="/fb"
                         render={() => (
                             <MainLayout>
                                 <About />
@@ -37,7 +37,7 @@ class App extends React.Component {
                     />
                     <Route
                         exact
-                        path="/todo"
+                        path="/google"
                         render={() => (
                             <MainLayout>
                                 <Todo />

@@ -1,4 +1,3 @@
-
 export default function MethodMixin(Component) {
     class AboutMethods extends Component {
         constructor(props) {

@@ -1,6 +1,3 @@
-import React from 'react';
-
-
 export default function MethodMixin(Component) {
     class HomeMethods extends Component {
         constructor(props) {

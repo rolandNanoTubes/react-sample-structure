@@ -1,13 +1,20 @@
-import { SetBy, SetMessage } from './type/sampleType'
+import { ShowSampleMessage, SetMessage, HideSampleMessage } from './type/sampleType'
 
-export function setMessage () {
+export function setMessage (message) {
     return {
-        type: SetMessage
+        type: SetMessage,
+        message
     }
 }
 
-export function setBy () {
+export function showSampleMessage () {
     return {
-        type: SetBy
+        type: ShowSampleMessage,
+    }
+}
+
+export function hideSampleMessage () {
+    return {
+        type: HideSampleMessage,
     }
 }

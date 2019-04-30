@@ -1,9 +1,9 @@
 export const Title = {
-    aboutTitle: 'About Page',
-    homeTitle: 'Home Page',
-    todoTitle: 'Todo Page',
+    google: 'Google Page',
+    home: 'Home Page',
+    facebook: 'Facebook Page',
 };
 
 export const PageDefaultDescription = {
-    default: 'Edit src/App.js and save to reload.'
+    default: 'Sample Pages Description which can be seen to all pages.'
 }
