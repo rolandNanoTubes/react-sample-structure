@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 import Home from '../Screens/Home';
 import About from '../Screens/Facebook';
@@ -16,7 +16,7 @@ class App extends React.Component {
         return (
             <div>
                 <Navigation />
-                <main>
+                <Switch >
                     <Route
                         exact
                         path="/"
@@ -44,7 +44,7 @@ class App extends React.Component {
                             </MainLayout>
                         )}
                     />
-                </main>
+                </Switch>
             </div>
         );
     }

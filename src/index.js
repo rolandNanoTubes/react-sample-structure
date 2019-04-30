@@ -1,8 +1,8 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
-import { BrowserRouter } from 'react-router-dom';
-import store from './Redux/store';
+import { ConnectedRouter } from 'connected-react-router';
+import store, { history } from './Redux/store';
 import App from './Router/appRoute';
 
 import './Styles/main.scss';
@@ -11,11 +11,11 @@ const target = document.querySelector('#root');
 
 render(
     <Provider store={store}>
-        <BrowserRouter>
+        <ConnectedRouter history={history}>
             <div>
                 <App />
             </div>
-        </BrowserRouter>
+        </ConnectedRouter>
     </Provider>,
     target,
 );
