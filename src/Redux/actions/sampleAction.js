@@ -1,4 +1,4 @@
-import { ShowSampleMessage, SetMessage, HideSampleMessage } from './type/sampleType'
+import { ShowSampleMessageSaga, HideSampleMessageSaga, SetMessage } from './type/sampleType'
 
 export function setMessage (message) {
     return {
@@ -9,12 +9,12 @@ export function setMessage (message) {
 
 export function showSampleMessage () {
     return {
-        type: ShowSampleMessage,
+        type: ShowSampleMessageSaga,
     }
 }
 
 export function hideSampleMessage () {
     return {
-        type: HideSampleMessage,
+        type: HideSampleMessageSaga,
     }
 }
