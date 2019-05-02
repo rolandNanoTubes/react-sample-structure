@@ -1,13 +1,32 @@
-import { put, takeEvery } from 'redux-saga/effects';
-import { ShowSampleMessageSaga, HideSampleMessageSaga, ShowSampleMessage, HideSampleMessage } from '../actions/type/sampleType';
+import { put, takeEvery, call } from 'redux-saga/effects';
+import {
+    ShowSampleMessageSaga,
+    HideSampleMessageSaga,
+    ShowSampleMessage,
+    HideSampleMessage,
+} from '../actions/type/sampleType';
 
-export function* sampleMessageShowHandle(payload) {
-    console.log('Showing message');
-    yield put({ type: ShowSampleMessage });
+export function* sampleMessageShowHandle() {
+    let response = {};
+    try {
+        // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+        console.log('fetching random user, will take time before showing the extra text');
+        const fetchResponse = yield call(fetch, 'https://randomuser.me/api/');
+        response = yield fetchResponse.json();
+    } catch (err) {
+        console.log(err);
+        return; // prevent moving forward to setting Data
+    }
+    yield setData(response);
 }
 
-export function* sampleMessageHideHandle(payload) {
-    console.log('Hiding message');
+function* setData({ results }) {
+    const { name } = results[0];
+    const fullName = `${name.title} ${name.first} ${name.last}`;
+    yield put({ type: ShowSampleMessage, fullName });
+}
+
+function* sampleMessageHideHandle() {
     try {
         yield put({ type: HideSampleMessage });
 

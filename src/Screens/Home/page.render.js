@@ -26,6 +26,7 @@ export default class Home extends Component {
                     {sample.isShowSampleMessage ? (
                         <SampleMessage
                             message={sample.message}
+                            fullName={sample.fullName}
                             hideSampleMessage={hideSampleMessage}
                         />
                     ) : (

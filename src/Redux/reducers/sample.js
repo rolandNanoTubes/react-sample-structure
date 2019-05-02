@@ -3,6 +3,7 @@ import { SetMessage, ShowSampleMessage, HideSampleMessage } from '../actions/typ
 const initialSampleState = {
     isShowSampleMessage: false,
     message: 'Showing sample text',
+    fullName: ''
 };
 
 export default function sample(state = initialSampleState, action) {
@@ -10,7 +11,7 @@ export default function sample(state = initialSampleState, action) {
         case SetMessage:
             return Object.assign({}, state, { message: action.message });
         case ShowSampleMessage:
-            return Object.assign({}, state, { isShowSampleMessage: true });
+            return Object.assign({}, state, { isShowSampleMessage: true, fullName: action.fullName });
         case HideSampleMessage:
             return Object.assign({}, state, { isShowSampleMessage: false });
         default:

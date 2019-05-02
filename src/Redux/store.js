@@ -10,13 +10,13 @@ const sagaMiddleware = createSageMiddleWare();
 
 const middleware = [thunk, sagaMiddleware];
 
-export const history = createBrowserHistory()
+export const history = createBrowserHistory();
 
 // for redux dev tool
 const composeEnhancers =
-    typeof window === 'object' &&
-    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ?
-        window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({}) : compose;
+    typeof window === 'object' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+        ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({})
+        : compose;
 
 const enhancer = composeEnhancers(
     applyMiddleware(...middleware),
