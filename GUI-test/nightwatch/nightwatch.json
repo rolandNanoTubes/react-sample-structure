@@ -1,0 +1,61 @@
+{
+  "src_folders" : ["smoke-test"],
+  "page_objects_path": "page-object",
+  "globals_path": "globals.js",
+  "end_session_on_fail": true,
+
+  "webdriver": {
+    "server_path": "../../node_module/chromedriver/lib/chromedriver",
+    "cli_args": [
+      "--verbose"
+    ],
+    "port": 9515
+  },
+
+  "test_settings" : {
+    "default": {
+      "launch_url": "http://localhost:3000/",
+      "selenium_port": 9515,
+      "selenium_host": "localhost",
+      "default_path_prefix" : "",
+      "silent": true,
+      "screenshots": {
+        "enabled": true,
+        "path": ""
+      },
+      "test_workers": {
+        "enabled": true,
+        "workers": "auto"
+      },
+      "desiredCapabilities": {
+        "browserName": "chrome",
+        "chromeOptions": {
+          "args": [
+            "start-fullscreen",
+            "--no-sandbox"
+          ]
+        },
+        "loggingPrefs": {"driver": "INFO", "server": "OFF", "browser": "INFO"}
+      }
+    },
+    "chrome": {
+      "desiredCapabilities": {
+        "browserName": "chrome"
+      }
+    },
+    "chromeDesktop": {
+      "test_workers": {
+        "enabled": true,
+        "workers": "auto"
+      },
+      "desiredCapabilities": {
+        "browserName": "chrome",
+        "chromeOptions": {
+          "args": [
+            "start-fullscreen"
+          ]
+        }
+      }
+    }
+  }
+}
