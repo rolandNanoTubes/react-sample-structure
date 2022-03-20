@@ -1,10 +1,10 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import createSageMiddleWare from 'redux-saga';
-import rootReducer from './reducers';
+import rootReducer from './index';
 import { createBrowserHistory } from 'history';
 
-import rootSaga from './saga';
+import rootSaga from '../Saga';
 
 const sagaMiddleware = createSageMiddleWare();
 

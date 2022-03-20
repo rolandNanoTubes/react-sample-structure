@@ -1,7 +1,7 @@
 const images = {
-    logo: require('../Images/logo.svg'),
-    todoLogo: require('../Images/sample1.png'),
-    aboutLogo: require('../Images/sample2.png')
+    home: require('../Images/logo.svg'),
+    google: require('../Images/sample1.png'),
+    facebook: require('../Images/sample2.png')
 };
 
 

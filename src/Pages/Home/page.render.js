@@ -3,16 +3,16 @@ import React, { Component } from 'react';
 import Images from '../../Templates/Images';
 import { Title, PageDefaultDescription as Description } from '../../Templates/Constants';
 
-import SampleMessage from './components/sampleMessage';
+import SampleMessage from './SubComponents/sampleMessage';
 
 export default class Home extends Component {
     render() {
-        const { sample, showSampleMessage, hideSampleMessage } = this.props;
+        const { sample, showSampleMessage, hideSampleMessage, sectionId } = this.props;
         return (
             <section id="home">
                 <header className="App-header">
                     <p> {Title.home} </p>
-                    <img src={Images.logo} className="App-logo" alt="logo" />
+                    <img src={Images[sectionId]} className="App-logo" alt="logo" />
                     <p>{Description.default}</p>
                     <a
                         className="App-link"

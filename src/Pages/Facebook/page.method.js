@@ -1,14 +1,31 @@
+import _ from 'lodash';
+
 export default function MethodMixin(Component) {
-    class AboutMethods extends Component {
+    class FacebookMethods extends Component {
         constructor(props) {
             super(props);
-            this.state = {};
+            this.state = {
+                dataDetails: [],
+            };
         }
 
         componentDidMount() {
-            console.log('Now Viewing About page!')
+            const { getAnimalAdaptData } = this.props;
+            getAnimalAdaptData()
+                .then((data) => {
+                    console.log(data);
+                    this.setState({
+                        dataDetails: _.get(data, 'entries', []).map((details) => ({
+                            content1: details.Category,
+                            content2: details.Description,
+                        })),
+                    })
+                })
+                .catch((e) => {
+                    console.log('error : ', e);
+                })
         }
     }
 
-    return AboutMethods;
+    return FacebookMethods;
 }

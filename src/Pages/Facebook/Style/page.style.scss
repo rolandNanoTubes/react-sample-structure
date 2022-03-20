@@ -1,0 +1,23 @@
+#facebook {
+    background-color: #282c34;
+    min-height: 100vh;
+}
+
+.content-container {
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.data-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border: 1px solid;
+    padding: 10px;
+}
+
+.App-header {
+    height: unset;
+    margin-bottom: 20px;
+}

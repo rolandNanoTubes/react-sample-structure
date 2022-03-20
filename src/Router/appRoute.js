@@ -1,9 +1,9 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-import Home from '../Pages/Home';
-import About from '../Pages/Facebook';
-import Todo from '../Pages/Google';
+import Home from '../Pages/Home/page-container';
+import About from '../Pages/Facebook/page.container';
+import Todo from '../Pages/Google/page.container';
 
 // layout
 import MainLayout from '../Components/Layout/mainLayout';

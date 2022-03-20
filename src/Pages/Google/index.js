@@ -1,25 +1,3 @@
-import { connect } from 'react-redux';
-import { withRouter } from 'react-router';
-import { bindActionCreators } from 'redux';
+import GooglePage from './page.container';
 
-import Render from './page.render';
-import MethodMixin from './page.method';
-
-
-const Todo = MethodMixin(Render);
-
-function mapStateToProps(state) {
-    return {};
-}
-
-function mapDispatchToProps(dispatch) {
-    return bindActionCreators(
-        {},
-        dispatch,
-    );
-}
-
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(withRouter(Todo));
+export default GooglePage;

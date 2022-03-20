@@ -4,7 +4,7 @@ import {
     HideSampleMessageSaga,
     ShowSampleMessage,
     HideSampleMessage,
-} from '../actions/type/sampleType';
+} from '../Pages/Home/Action/type/sampleType';
 
 export function* sampleMessageShowHandle() {
     let response = {};

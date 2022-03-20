@@ -1,4 +1,4 @@
-import { SetMessage, ShowSampleMessage, HideSampleMessage } from '../actions/type/sampleType';
+import { SetMessage, ShowSampleMessage, HideSampleMessage } from '../Action/type/sampleType';
 
 const initialSampleState = {
     isShowSampleMessage: false,
