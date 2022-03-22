@@ -6,7 +6,7 @@ import './Style/page.style.scss';
 import Render from './page.render';
 import MethodMixin from './page.method';
 
-import { showSampleMessage, hideSampleMessage } from './Action/sampleAction';
+import { showSampleMessage, hideSampleMessage } from './Action/page.action';
 
 const Home = MethodMixin(Render);
 

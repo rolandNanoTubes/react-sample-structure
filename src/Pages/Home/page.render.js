@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-import Images from '../../Templates/Images';
-import { Title, PageDefaultDescription as Description } from '../../Templates/Constants';
+import Images from '../../Utils/Images';
+import { Title, PageDefaultDescription as Description } from '../../Utils/Constants';
 
-import SampleMessage from './SubComponents/sampleMessage';
+import SampleMessage from './SubComponents/customMessage';
 
 export default class Home extends Component {
     render() {

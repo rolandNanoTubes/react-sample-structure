@@ -12,8 +12,8 @@ export default class Navigation extends Component {
             <section id="navigation">
                 <header>
                     <Link to="/">Home</Link>
-                    <Link to="/fb">Facebook</Link>
-                    <Link to="/google">Google</Link>
+                    <Link to="/page1">page1</Link>
+                    <Link to="/page2">page2</Link>
                 </header>
             </section>
         )

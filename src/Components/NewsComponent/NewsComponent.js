@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { PageDefaultDescription as Description } from '../../Templates/Constants';
-import Images from '../../Templates/Images';
+import { PageDefaultDescription as Description } from '../../Utils/Constants';
+import Images from '../../Utils/Images';
 
 class NewsComponent extends React.Component {
     _renderHeader = () => {

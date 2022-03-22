@@ -4,7 +4,7 @@ import createSageMiddleWare from 'redux-saga';
 import rootReducer from './index';
 import { createBrowserHistory } from 'history';
 
-import rootSaga from '../Saga';
+import rootSaga from './Saga';
 
 const sagaMiddleware = createSageMiddleWare();
 

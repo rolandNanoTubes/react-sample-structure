@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Images from '../../Templates/Images';
-import { PageDefaultDescription as Description, Title } from '../../Templates/Constants';
+import Images from '../../Utils/Images';
+import { PageDefaultDescription as Description, Title } from '../../Utils/Constants';
 
 export default class GoogleRender extends Component {
     render() {

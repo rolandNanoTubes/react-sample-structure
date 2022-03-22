@@ -1,9 +1,5 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { Route, Switch } from 'react-router-dom';
-
-import Home from '../Pages/Home/page-container';
-import About from '../Pages/Facebook/page.container';
-import Todo from '../Pages/Google/page.container';
 
 // layout
 import MainLayout from '../Components/Layout/mainLayout';
@@ -11,10 +7,15 @@ import MainLayout from '../Components/Layout/mainLayout';
 // navigation
 import Navigation from '../Components/Navigation/navigation';
 
+
+const Home = lazy(() => import('../Pages/Home'));
+const Page1 = lazy(() => import('../Pages/Page1'));
+const Page2 = lazy(() => import('../Pages/Page2'));
+
 class App extends React.Component {
     render() {
         return (
-            <div>
+            <Suspense fallback={<div>Loading</div>}>
                 <Navigation />
                 <Switch >
                     <Route
@@ -28,24 +29,24 @@ class App extends React.Component {
                     />
                     <Route
                         exact
-                        path="/fb"
+                        path="/page1"
                         render={() => (
                             <MainLayout>
-                                <About />
+                                <Page1 />
                             </MainLayout>
                         )}
                     />
                     <Route
                         exact
-                        path="/google"
+                        path="/page2"
                         render={() => (
                             <MainLayout>
-                                <Todo />
+                                <Page2 />
                             </MainLayout>
                         )}
                     />
                 </Switch>
-            </div>
+            </Suspense>
         );
     }
 }

@@ -1,4 +1,4 @@
-import { ShowSampleMessageSaga, HideSampleMessageSaga, SetMessage } from './type/sampleType'
+import { ShowSampleMessageSaga, HideSampleMessageSaga, SetMessage } from './type/actionType'
 
 export function setMessage (message) {
     return {

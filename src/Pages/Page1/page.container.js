@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import { bindActionCreators } from 'redux';
 
-import { getAnimalAdaptData } from './Action/facebook.action';
+import { getAnimalAdaptData } from './Action/page.action';
 import NewsComponent from '../../Components/NewsComponent/NewsComponent';
 import MethodMixin from './page.method';
 import './Style/page.style.scss'
